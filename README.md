@@ -10,7 +10,7 @@ The dataset is available via [Zenodo](#).
 
 
 ### Paper
-* To be added here [TBA]().
+* To be added here [TBA](https://zenodo.org/record/7878371).
 
 ### References
 
