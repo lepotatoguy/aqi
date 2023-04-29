@@ -14,7 +14,7 @@ The dataset is available via [Zenodo](#).
 
 ### References
 
-If you have used the EuroSAT dataset, please cite the following papers: 
+If you have used this dataset, please cite the following paper: 
 
 [1] Unmasking the Invisible: Finding Location-Specific Aggregated Air Quality Index with Smartphone-Captured Images. Joyanta Jyoti Mondal, Md. Farhadul Islam, Raima Islam, Nowsin Kabir Rhidi, A. B. M. Alim Al Islam, Meem Arafat Manab, and Jannatun Noor. (TBA)
 
