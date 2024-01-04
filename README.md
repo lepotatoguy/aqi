@@ -1,4 +1,4 @@
-# Unmasking the Invisible: Finding Location-Specific Aggregated Air Quality Index with Smartphone-Captured Images
+# Uncovering local aggregated air quality index with smartphone captured images leveraging efficient deep convolutional neural network
 
 ## Short Description
 
