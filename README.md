@@ -11,13 +11,13 @@ The dataset is available via [Zenodo](https://zenodo.org/record/7878371).
 
 ### Paper
 * [Preprint](https://arxiv.org/abs/2308.03200)
-* Accepted to Nature Scientific Reports. To be added here [TBA](#).
+* Published to Nature Scientific Reports. [Link](https://www.nature.com/articles/s41598-023-51015-1?).
 
 ### References
 
 If you have used this dataset, please cite the following paper: 
 
-[1] Uncovering local aggregated air quality index with smartphone captured images leveraging efficient deep convolutional neural network. Joyanta Jyoti Mondal, Md. Farhadul Islam, Raima Islam, Nowsin Kabir Rhidi, Sarfaraz Newaz, A. B. M. Alim Al Islam, Meem Arafat Manab, and Jannatun Noor.
+[1] Mondal, J.J., Islam, M.F., Islam, R. et al. Uncovering local aggregated air quality index with smartphone captured images leveraging efficient deep convolutional neural network. Sci Rep 14, 1627 (2024). https://doi.org/10.1038/s41598-023-51015-1
 
 ```
 @misc{mondal2023uncovering,
