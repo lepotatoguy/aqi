@@ -10,7 +10,6 @@ The dataset is available via [Zenodo](https://zenodo.org/record/7878371).
 
 
 ### Paper
-* [Preprint](https://arxiv.org/abs/2308.03200)
 * Published to Nature Scientific Reports. [Link](https://www.nature.com/articles/s41598-023-51015-1?).
 
 ### References
@@ -20,12 +19,16 @@ If you have used this dataset, please cite the following paper:
 [1] Mondal, J.J., Islam, M.F., Islam, R. et al. Uncovering local aggregated air quality index with smartphone captured images leveraging efficient deep convolutional neural network. Sci Rep 14, 1627 (2024). https://doi.org/10.1038/s41598-023-51015-1
 
 ```
-@misc{mondal2023uncovering,
-      title={Uncovering local aggregated air quality index with smartphone captured images leveraging efficient deep convolutional neural network}, 
-      author={Joyanta Jyoti Mondal and Md. Farhadul Islam and Raima Islam and Nowsin Kabir Rhidi and Sarfaraz Newaz and A. B. M. Alim Al Islam and Meem Arafat Manab and Jannatun Noor},
-      year={2023},
-      eprint={2308.03200},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
-}
+@article{Mondal_2024,
+   title={Uncovering local aggregated air quality index with smartphone captured images leveraging efficient deep convolutional neural network},
+   volume={14},
+   ISSN={2045-2322},
+   url={http://dx.doi.org/10.1038/s41598-023-51015-1},
+   DOI={10.1038/s41598-023-51015-1},
+   number={1},
+   journal={Scientific Reports},
+   publisher={Springer Science and Business Media LLC},
+   author={Mondal, Joyanta Jyoti and Islam, Md. Farhadul and Islam, Raima and Rhidi, Nowsin Kabir and Newaz, Sarfaraz and Manab, Meem Arafat and Islam, A. B. M. Alim Al and Noor, Jannatun},
+   year={2024},
+   month=jan }
 ```
