@@ -34,8 +34,8 @@ unrar x dataset.rar
 
 # Move the dataset to codes directory
 mv dataset2.0 dataset
-mv dataset ../Codes/
-mv dataset.xlsx ../Codes/
+mv dataset2.0 Codes/dataset
+mv dataset.xlsx Codes/
 
 # Go to the Codes directory
 cd ../Codes/
