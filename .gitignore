@@ -2,3 +2,12 @@ dataset.rar
 files-archive.zip
 Codes/dataset
 Codes/dataset.xlsx
+*.h5
+*.hdf5
+*.ipynb_checkpoints
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.keras
+*.png
