@@ -1,0 +1,43 @@
+at the very top of the jupyter, if needed, create two cells, and copy these below.
+
+```
+import os, pathlib
+
+# Validate the conda CUDA location
+prefix = os.environ.get("CONDA_PREFIX")
+assert prefix and os.path.exists(prefix), f"Bad CONDA_PREFIX: {prefix}"
+
+nvvm_dir = pathlib.Path(prefix) / "nvvm"
+libdevice = nvvm_dir / "libdevice" / "libdevice.10.bc"
+assert libdevice.exists(), f"libdevice.10.bc not found at: {libdevice}"
+
+# Tell XLA where CUDA data lives (the directory that contains 'nvvm/')
+os.environ["XLA_FLAGS"] = f"--xla_gpu_cuda_data_dir={prefix}"
+
+# Helpful extras so everything resolves cleanly when the kernel spawns subprocesses
+os.environ["CUDA_HOME"] = prefix
+os.environ["LD_LIBRARY_PATH"] = f"{prefix}/lib:" + os.environ.get("LD_LIBRARY_PATH","")
+
+# Optional: reduce TensorFlow logging noise
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "1"
+
+print("Using CUDA data dir:", prefix)
+print("libdevice exists:", libdevice.exists())
+print("XLA_FLAGS:", os.environ["XLA_FLAGS"])
+```
+
+```
+import tensorflow as tf
+print("TF:", tf.__version__)
+print("GPUs:", tf.config.list_physical_devices('GPU'))
+
+# Force an XLA-compiled matmul (jit_compile=True triggers XLA)
+@tf.function(jit_compile=True)
+def xla_matmul(a, b):
+    return tf.matmul(a, b)
+
+a = tf.random.uniform((1024, 1024))
+b = tf.random.uniform((1024, 1024))
+c = xla_matmul(a, b)   # should run without 'libdevice' errors
+print("XLA matmul ok; shape:", c.shape)
+```

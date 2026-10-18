@@ -1,4 +1,4 @@
-name: aqi-net
+name: aqi-net-pytorch
 channels:
   - conda-forge
   - defaults
