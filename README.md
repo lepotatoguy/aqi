@@ -1,22 +1,70 @@
 # Uncovering local aggregated air quality index with smartphone captured images leveraging efficient deep convolutional neural network
 
-## Short Description
+## Table of Contents
+
+- [Overview](#overview)
+- [Paper](#paper)
+- [Dataset](#dataset)
+- [Repository Structure](#repository-structure)
+- [Installation](#installation)
+- [Dataset Setup](#dataset-setup)
+- [Usage](#usage)
+- [Citation](#citation)
+- [License](#license)
+
+## Overview
 
 In this research, we vigorously analyze the difficulties of predicting location-specific PM2.5 concentration from photos captured by smartphone cameras. Here, we particularly focus on Dhaka, the capital of Bangladesh, considering its very high level of air pollution exposure to a huge number of its dwellers. In our research, we develop a Deep Convolutional Neural Network (DCNN) and train it using more than a thousand outdoor photos captured and labeled by us. We capture the photos at various locations in Dhaka, Bangladesh, and label them based on PM2.5 concentration data extracted from the local US consulate as computed by the NowCast algorithm. During training with the dataset, our model learns a correlation index through supervised learning, which improves the model's ability to act as a Picture-based Predictor of PM2.5 Concentration (PPPC) making it capable of detecting comparable daily aggregated AQI index from a photo captured by a smartphone. The code and dataset is made publicly available [here](#).
 
-### Dataset
+## Paper
+
+* Published to Nature Scientific Reports. [Link](https://www.nature.com/articles/s41598-023-51015-1?).
+
+## Dataset
+
 The dataset is available via [Zenodo](https://zenodo.org/record/7878371).
 
-### Quick Start
+## Repository Structure
 
 ```
-# Clone the repository
+aqi/
+├── Codes/
+│   ├── 2.0airwire_optimum-final-documented.ipynb
+│   ├── 2.0airwire_optimum-k-fold-results - Compiled.ipynb
+│   ├── 2.0airwire_optimum_other_models-with-pretrained-weights.ipynb
+│   ├── for tensorflow in ubuntu.txt
+│   └── k-fold-results.txt
+├── environment.yml
+├── LICENSE
+└── README.md
+```
+
+## Installation
+
+### 1. Clone the repository
+
+```
 git clone https://github.com/lepotatoguy/aqi.git
 cd aqi
+```
 
-# Install dependencies
+### 2. Install dependencies
+
+```
 conda env create -f environment.yml
+```
 
+We use these commands below to create the environment.
+
+```
+conda create -n aqi-net python=3.10
+conda activate aqi-net
+conda install -y -c conda-forge tensorflow-gpu seaborn pandas matplotlib opencv ipykernel tqdm scikit-learn
+```
+
+## Dataset Setup
+
+```
 # Download the dataset
 wget https://zenodo.org/api/records/7878371/files-archive -O files-archive.zip
 
@@ -36,30 +84,20 @@ unrar x dataset.rar
 mv dataset2.0 dataset
 mv dataset2.0 Codes/dataset
 mv dataset.xlsx Codes/
+```
 
+## Usage
+
+```
 # Go to the Codes directory
 cd ../Codes/
 
 ## Launch Jupyter Notebook or VS Code or your prefered software to launch the code
 # jupyter notebook 2.0airwire_optimum-final-documented.ipynb
 # code 2.0airwire_optimum-final-documented.ipynb
-
 ```
 
-We use these commands below to create the environment.
-
-```
-conda create -n aqi-net python=3.10
-conda activate aqi-net
-conda install -y -c conda-forge pytorch torchvision seaborn pandas matplotlib opencv ipykernel tqdm scikit-learn openpyxl
-```
-
-The code uses PyTorch. On a machine with an NVIDIA driver, conda-forge installs the CUDA build of `pytorch`; `Codes/for pytorch in ubuntu.txt` has a cell to check that the GPU is used.
-
-### Paper
-* Published to Nature Scientific Reports. [Link](https://www.nature.com/articles/s41598-023-51015-1?).
-
-### Citation
+## Citation
 
 If you have used this dataset, please cite the following paper: 
 
@@ -79,3 +117,7 @@ If you have used this dataset, please cite the following paper:
    year={2024},
    month=jan }
 ```
+
+## License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
