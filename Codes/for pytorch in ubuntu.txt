@@ -1,0 +1,17 @@
+PyTorch does not need the CONDA_PREFIX / CUDA_HOME / XLA_FLAGS / libdevice setup that TensorFlow needed:
+the PyTorch builds bring their own CUDA runtime libraries.
+
+at the very top of the jupyter, if needed, create a cell, and copy this below to check that the GPU is used.
+
+```
+import torch
+print("PyTorch:", torch.__version__)
+print("CUDA available:", torch.cuda.is_available())
+print("GPUs:", [torch.cuda.get_device_name(i) for i in range(torch.cuda.device_count())])
+
+# Run a matmul on the GPU
+a = torch.rand((1024, 1024), device="cuda")
+b = torch.rand((1024, 1024), device="cuda")
+c = a @ b   # should run without CUDA errors
+print("GPU matmul ok; shape:", c.shape)
+```

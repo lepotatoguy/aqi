@@ -11,3 +11,5 @@ __pycache__/
 *.pyd
 *.keras
 *.png
+*.pt
+*.pth

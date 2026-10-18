@@ -51,8 +51,10 @@ We use these commands below to create the environment.
 ```
 conda create -n aqi-net python=3.10
 conda activate aqi-net
-conda install -y -c conda-forge tensorflow-gpu seaborn pandas matplotlib opencv ipykernel tqdm scikit-learn
+conda install -y -c conda-forge pytorch torchvision seaborn pandas matplotlib opencv ipykernel tqdm scikit-learn openpyxl
 ```
+
+The code uses PyTorch. On a machine with an NVIDIA driver, conda-forge installs the CUDA build of `pytorch`; `Codes/for pytorch in ubuntu.txt` has a cell to check that the GPU is used.
 
 ### Paper
 * Published to Nature Scientific Reports. [Link](https://www.nature.com/articles/s41598-023-51015-1?).
