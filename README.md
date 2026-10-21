@@ -21,7 +21,7 @@ In this research, we vigorously analyze the difficulties of predicting location-
 
 ## Implementations
 
-The code is available in two independent implementations. Choose the one you want to work with; each folder has its own notebooks, conda environment and GPU notes, and neither depends on the other.
+The code is available in two independent implementations. Choose the one you want to work with; each folder has its own notebooks, conda environment and GPU notes, and neither depends on the other (if following strictly based on the research, please follow the Tensorflow one).
 
 | Framework | Folder | Conda environment | Notes |
 |---|---|---|---|
@@ -79,7 +79,7 @@ cd aqi
 
 Create the environment of the framework you chose.
 
-#### TensorFlow
+#### TensorFlow (In research, we use this version)
 
 ```
 conda env create -f Codes/TensorFlow/environment.yml
